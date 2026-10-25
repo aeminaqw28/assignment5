@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lis | Look Game</title>
+  <meta name="description" content="Guess if the next Lis look is from a later or an earlier decade.">
+  <link rel="icon" href="img/mark-gold.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..800;1,6..96,500..800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/lab.css" rel="stylesheet">
+  <script src="js/game.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" href="index.html" aria-label="Lis, home">
+          <img src="img/mark-gold.svg" alt="" width="30" height="20">
+          <span>Lis</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteMenu" aria-controls="siteMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteMenu">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="lookbook.html">Lookbook</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Style Quiz</a></li>
+          <li class="nav-item"><a class="nav-link active" href="game.html" aria-current="page">Look Game</a></li>
+          <li class="nav-item"><a class="nav-link" href="planner.html">Planner</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">Look Game</p>
+        <h1 class="page-head__title">Earlier or later?</h1>
+        <p class="page-head__lead">Is the next look from a later or an earlier decade? Three lives. Reach a streak of eight to win.</p>
+      </div>
+    </section>
+
+    <section class="section section--flush">
+      <div class="container">
+        <div class="row gy-5 gx-lg-5">
+          <div class="col-12 col-lg-8">
+            <div class="game">
+              <div class="game__stats">
+                <p class="game__stat"><span class="game__label">Lives</span> <span id="lives" class="hearts" role="img"></span></p>
+                <p class="game__stat"><span class="game__label">Streak</span> <strong id="streak">0</strong></p>
+                <p class="game__stat"><span class="game__label">Best</span> <strong id="best">0</strong></p>
+              </div>
+
+              <div class="game__cards">
+                <figure id="currentCard" class="arch game__card">
+                  <img src="img/paris-1920s.svg" alt="" width="220" height="510">
+                  <figcaption class="game__caption"></figcaption>
+                </figure>
+                <figure id="nextCard" class="arch game__card">
+                  <img src="img/paris-1920s.svg" alt="" width="220" height="510">
+                  <figcaption class="game__caption"></figcaption>
+                </figure>
+              </div>
+
+              <p id="message" class="game__message" role="status"></p>
+
+              <div class="game__buttons">
+                <button id="higherBtn" type="button" class="btn btn-lis btn-lg">Later &uarr;</button>
+                <button id="lowerBtn" type="button" class="btn btn-lis-outline btn-lg">Earlier &darr;</button>
+              </div>
+
+              <div id="gameOver" class="game__over" role="status">
+                <h2 id="overTitle" class="game__over-title"></h2>
+                <p id="overText"></p>
+                <button id="restartBtn" type="button" class="btn btn-lis btn-lis--gold">Play again</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <aside class="side">
+              <h2 class="side__title">How to play</h2>
+              <ul class="side__list">
+                <li>The left look is the current one. Guess if the right look is from a later or an earlier decade.</li>
+                <li>Equal decades count as a right guess.</li>
+                <li>A wrong guess costs one life and resets the streak.</li>
+                <li>Keyboard: Arrow Up is Later, Arrow Down is Earlier.</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <p class="footer-brand"><img src="img/mark-gold.svg" alt="" width="30" height="20"> Lis</p>
+          <p class="footer-text">A fictional styling studio rooted in Kazakhstan. Outfits for every era, from Paris to the steppe.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="footer-title">Pages</h2>
+          <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="lookbook.html">Lookbook</a></li><li><a href="quiz.html">Style Quiz</a></li><li><a href="game.html">Look Game</a></li><li><a href="planner.html">Planner</a></li><li><a href="booking.html">Booking</a></li></ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="footer-title">Wardrobes</h2>
+          <ul class="footer-links">
+            <li><a href="lookbook.html#paris">Paris</a></li>
+            <li><a href="lookbook.html#europe">Europe</a></li>
+            <li><a href="lookbook.html#america">America</a></li>
+            <li><a href="lookbook.html#kazakh">Qazaqstan</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-credits">Illustrations: original vector artwork generated with AI (Claude, Anthropic) for this student project. Fonts: Bodoni Moda and Jost from Google Fonts. Built with HTML, CSS, JavaScript and Bootstrap 5.3.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
